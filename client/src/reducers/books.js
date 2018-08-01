@@ -1,6 +1,6 @@
-const booksReducerDefaultState = [];
+const initialState = [];
 
-export default (state = booksReducerDefaultState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
       return [
@@ -20,7 +20,7 @@ export default (state = booksReducerDefaultState, action) => {
           return book;
         }
       });
-    case 'GET_BOOKs':
+    case 'GET_BOOKS':
       return action.books;
     default:
       return state;

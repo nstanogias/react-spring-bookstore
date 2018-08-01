@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { editBook } from '../actions/books';
 
 const EditBook = (props) => (
-    <div className='container__box'>
+    <div>
         <BookForm
             book={props.book}
             onSubmitBook={(book) => {

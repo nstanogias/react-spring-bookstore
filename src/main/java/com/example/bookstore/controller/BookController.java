@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.bookstore.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
-import com.example.demo.model.Book;
-import com.example.demo.repository.BookRepository;
+import com.example.bookstore.model.Book;
+import com.example.bookstore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

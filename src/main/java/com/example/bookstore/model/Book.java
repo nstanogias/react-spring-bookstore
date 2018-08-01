@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.bookstore.model;
 
 /**
  * Created by nickstanogias on 30/07/18.

@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
     <header>
-        <h2>Java Sample Approach</h2>
-        <h4>Book Management Application</h4>
-        <div className='header__nav'>
-            <NavLink to='/' activeClassName='activeNav' exact={true}>Dashboard</NavLink>
-            <NavLink to='/add' activeClassName='activeNav'>Add Book</NavLink>
+        <h3>Book Management Application</h3>
+        <div>
+          <ul className="list-unstyled">
+            <li><NavLink to='/' exact={true}>Dashboard</NavLink></li>
+            <li><NavLink to='/add' >Add Book</NavLink></li>
+          </ul>
         </div>
     </header>
 );

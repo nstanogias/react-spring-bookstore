@@ -4,7 +4,7 @@ import Book from './Book';
 
 const BookList = (props) => (
     <div>
-        Book List:
+      <h3>Book List:</h3>
         <ul>
             {props.books.map(book => {
                 return (
@@ -22,6 +22,6 @@ const mapStateToProps = (state) => {
     return {
         books: state
     };
-}
+};
 
 export default connect(mapStateToProps)(BookList);

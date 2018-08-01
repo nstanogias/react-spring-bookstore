@@ -60,29 +60,37 @@ export default class BookForm extends React.Component {
     render() {
         return (
             <div>
-                {this.state.error && <p className='error'>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit} className='add-book-form'>
+                {this.state.error && <p className='text-danger'>{this.state.error}</p>}
+                <form onSubmit={this.onSubmit}>
 
+                    <div className='form-group'>
                     <input type="text" placeholder="title" autoFocus
                         value={this.state.title}
                         onChange={this.onTitleChange} />
                     <br />
+                    </div>
 
+                  <div className='form-group'>
                     <input type="text" placeholder="author"
                         value={this.state.author}
                         onChange={this.onAuthorChange} />
                     <br />
+                  </div>
 
+                  <div className='form-group'>
                     <textarea placeholder="description"
                         value={this.state.description}
                         onChange={this.onDescriptionChange} />
                     <br />
+                  </div>
 
+                  <div className='form-group'>
                     <input type="number" placeholder="published"
                         value={this.state.published}
                         onChange={this.onPublishedChange} />
                     <br />
-                    <button>Add Book</button>
+                  </div>
+                    <button type="submit" className="btn btn-primary">Add Book</button>
                 </form>
             </div>
         );

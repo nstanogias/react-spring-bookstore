@@ -9,7 +9,9 @@ import NotFound from '../components/NotFound';
 const AppRouter = () => (
     <BrowserRouter>
         <div className='container'>
+          <div className='row align-items-center justify-content-center'>
             <Header />
+          </div>
             <Switch>
                 <Route path="/" component={DashBoard} exact={true} />
                 <Route path="/add" component={AddBook} />
