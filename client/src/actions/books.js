@@ -1,4 +1,4 @@
-import axios from '../axios/axios';
+import axios from 'axios';
 
 const _addBook = (book) => ({
   type: 'ADD_BOOK',
