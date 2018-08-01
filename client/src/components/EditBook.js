@@ -9,7 +9,7 @@ const EditBook = () => (
             book={this.props.book}
             onSubmitBook={(book) => {
                 editBook(this.props.book.id, book);
-                props.history.push('/');
+                this.props.history.push('/');
             }}
         />
     </div>
@@ -22,4 +22,10 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-export default connect(mapStateToProps, {editBook})(EditBook);
+const mapDispatchToProps = dispatch => {
+  return {
+    editBook: (id, book) => dispatch(editBook(id, book))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditBook);
