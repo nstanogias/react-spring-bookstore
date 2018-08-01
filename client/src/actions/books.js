@@ -19,7 +19,7 @@ export const addBook = (bookData = {
       published: bookData.published
     };
 
-    return axios.post('books/create', book).then(result => {
+    return axios.post('api/books/create', book).then(result => {
       dispatch(_addBook(result.data));
     });
   };
@@ -32,7 +32,7 @@ const _removeBook = ({ id } = {}) => ({
 
 export const removeBook = ({ id } = {}) => {
   return (dispatch) => {
-    return axios.delete(`books/${id}`).then(() => {
+    return axios.delete(`api/books/${id}`).then(() => {
       dispatch(_removeBook({ id }));
     })
   }
@@ -46,7 +46,7 @@ const _editBook = (id, updates) => ({
 
 export const editBook = (id, updates) => {
   return (dispatch) => {
-    return axios.put(`books/${id}`, updates).then(() => {
+    return axios.put(`api/books/${id}`, updates).then(() => {
       dispatch(_editBook(id, updates));
     });
   }
@@ -59,7 +59,7 @@ const _getBooks = (books) => ({
 
 export const getBooks = () => {
   return (dispatch) => {
-    return axios.get('books').then(result => {
+    return axios.get('api/books').then(result => {
       const books = [];
 
       result.data.forEach(item => {
