@@ -3,12 +3,12 @@ import BookForm from './BookForm';
 import { connect } from 'react-redux';
 import { editBook } from '../actions/books';
 
-const EditBook = (props) => (
-    <div>
+const EditBook = () => (
+    <div className='container__box'>
         <BookForm
-            book={props.book}
+            book={this.props.book}
             onSubmitBook={(book) => {
-                props.dispatch(editBook(props.book.id, book));
+                editBook(this.props.book.id, book);
                 props.history.push('/');
             }}
         />
@@ -22,4 +22,4 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-export default connect(mapStateToProps)(EditBook);
+export default connect(mapStateToProps, {editBook})(EditBook);
